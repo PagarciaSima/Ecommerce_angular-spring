@@ -398,3 +398,39 @@
 2024-05-09 14:46:44,694 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
 2024-05-09 14:46:44,700 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
 2024-05-09 14:46:44,703 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\pagarcia\OneDrive - Capgemini\Desktop\CURSOS\E-commerce_Angular&springboot\Backend\Spring-boot-ecommerce\src\test\resources
+2024-05-09 14:53:55,750 [Worker-25: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 14:53:55,764 [Worker-25: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 14:53:55,772 [Worker-25: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\pagarcia\OneDrive - Capgemini\Desktop\CURSOS\E-commerce_Angular&springboot\Backend\Spring-boot-ecommerce\src\test\resources
+2024-05-09 15:11:11,037 [Worker-29: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 15:11:11,052 [Worker-29: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 15:11:11,060 [Worker-29: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\pagarcia\OneDrive - Capgemini\Desktop\CURSOS\E-commerce_Angular&springboot\Backend\Spring-boot-ecommerce\src\test\resources
+2024-05-09 15:12:46,472 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 15:12:46,481 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 15:12:46,491 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\pagarcia\OneDrive - Capgemini\Desktop\CURSOS\E-commerce_Angular&springboot\Backend\Spring-boot-ecommerce\src\test\resources
+2024-05-09 15:13:04,483 [Worker-29: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 15:13:04,496 [Worker-29: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 15:13:04,512 [Worker-29: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\pagarcia\OneDrive - Capgemini\Desktop\CURSOS\E-commerce_Angular&springboot\Backend\Spring-boot-ecommerce\src\test\resources
+2024-05-09 15:13:55,055 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 15:13:55,061 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 15:13:55,066 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\pagarcia\OneDrive - Capgemini\Desktop\CURSOS\E-commerce_Angular&springboot\Backend\Spring-boot-ecommerce\src\test\resources
+2024-05-09 15:15:06,537 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 15:15:06,545 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 15:15:06,553 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\pagarcia\OneDrive - Capgemini\Desktop\CURSOS\E-commerce_Angular&springboot\Backend\Spring-boot-ecommerce\src\test\resources
+2024-05-09 15:25:29,002 [Worker-34: Launching Spring-boot-ecommerce - SpringBootEcommerceApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 15:25:29,029 [Worker-34: Launching Spring-boot-ecommerce - SpringBootEcommerceApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 15:25:29,037 [Worker-34: Launching Spring-boot-ecommerce - SpringBootEcommerceApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\pagarcia\OneDrive - Capgemini\Desktop\CURSOS\E-commerce_Angular&springboot\Backend\Spring-boot-ecommerce\src\test\resources
+2024-05-09 15:26:58,915 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 15:26:58,923 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 15:26:58,927 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\pagarcia\OneDrive - Capgemini\Desktop\CURSOS\E-commerce_Angular&springboot\Backend\Spring-boot-ecommerce\src\test\resources
+2024-05-09 15:29:53,943 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 15:29:53,952 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 15:29:53,957 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\pagarcia\OneDrive - Capgemini\Desktop\CURSOS\E-commerce_Angular&springboot\Backend\Spring-boot-ecommerce\src\test\resources
+2024-05-09 15:46:58,056 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 15:46:58,068 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 15:46:58,073 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\pagarcia\OneDrive - Capgemini\Desktop\CURSOS\E-commerce_Angular&springboot\Backend\Spring-boot-ecommerce\src\test\resources
+2024-05-09 22:37:16,959 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 22:37:16,992 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 22:37:17,005 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\pagarcia\OneDrive - Capgemini\Desktop\CURSOS\E-commerce_Angular&springboot\Backend\Spring-boot-ecommerce\src\test\resources
+2024-05-09 22:53:26,262 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 22:53:26,270 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 22:53:26,276 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\pagarcia\OneDrive - Capgemini\Desktop\CURSOS\E-commerce_Angular&springboot\Backend\Spring-boot-ecommerce\src\test\resources
