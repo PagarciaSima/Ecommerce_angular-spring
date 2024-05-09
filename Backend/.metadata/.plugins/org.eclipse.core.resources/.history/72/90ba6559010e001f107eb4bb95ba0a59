@@ -1,0 +1,13 @@
+package com.ecommerce.angularspring.Springbootecommerce.entity;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+import lombok.Data;
+
+@Entity
+@Table(name="product_categories")
+@Getter
+@Setter
+public class ProductCategory {
+
+}
