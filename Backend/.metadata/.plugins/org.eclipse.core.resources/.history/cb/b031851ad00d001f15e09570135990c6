@@ -1,0 +1,5 @@
+package com.ecommerce.angularspring.Springbootecommerce.entity;
+
+public class Product {
+
+}
