@@ -14,7 +14,9 @@
                             <h1>{{ tempProduct.name }}</h1>
                         </a>
 
-                        <div class="price">{{ tempProduct.unitPrice | currency:'USD' }}</div>
+                        <div class="price">
+                            <span class="badge text-bg-primary border border-black">{{ tempProduct.unitPrice | currency:'USD' }}</span>
+                        </div>
                         <a href="#" class="primary-btn">Add to cart</a>
                     </div>
 
