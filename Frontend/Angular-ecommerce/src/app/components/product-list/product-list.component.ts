@@ -20,6 +20,8 @@ export class ProductListComponent implements OnInit, AfterViewChecked {
   thePageSize: number = 5;
   theTotalElements: number = 0;
 
+  previousKeyword: string = "";
+
   constructor(private productService: ProductService,
               private route: ActivatedRoute,
               private renderer: Renderer2) { }
@@ -39,7 +41,7 @@ export class ProductListComponent implements OnInit, AfterViewChecked {
           this.renderer.addClass(span, 'd-none');
         }
       });
-    }, 100); // 100ms delay, adjust as needed
+    }, 100);
   }
 
   listProducts() {
@@ -59,12 +61,16 @@ export class ProductListComponent implements OnInit, AfterViewChecked {
 
     const theKeyword: string = this.route.snapshot.paramMap.get('keyword')!;
 
+    // If keyword changes set pageNumber to 1 (reset pagination)
+    if (this.previousKeyword != theKeyword){
+      this.thePageNumber = 1;
+    }
+
+    this.previousKeyword = theKeyword;
+    console.log(`keyword=${theKeyword}, thePageNumber=${this.thePageNumber}`);
+
     // now search for the products using keyword
-    this.productService.searchProducts(theKeyword).subscribe(
-      data => {
-        this.products = data;
-      }
-    )
+    this.productService.searchProductsPaginate(this.thePageNumber -1, this.thePageSize, theKeyword).subscribe(this.proccessResult());
   }
 
   handleListProducts() {
@@ -97,20 +103,22 @@ export class ProductListComponent implements OnInit, AfterViewChecked {
     console.log(`currentCategoryId=${this.currentCategoryId}, thePageNumber=${this.thePageNumber}`);
 
     // now get the products for the given category id
-    this.productService.getProductListPaginate(this.thePageNumber - 1, this.thePageSize,  this.currentCategoryId).subscribe(
-        data => {
-          this.products = data._embedded.products;
-          this.thePageNumber = data.page.number + 1;
-          this.thePageSize = data.page.size;
-          this.theTotalElements = data.page.totalElements;
-        }                                     
-    );
+    this.productService.getProductListPaginate(this.thePageNumber - 1, this.thePageSize,  this.currentCategoryId).subscribe(this.proccessResult());
   }
 
   updatePageSize(pageSize: string){
     this.thePageSize = +pageSize;
     this.thePageNumber = 1;
     this.listProducts();
+  }
+
+  proccessResult() {
+    return (data: any) => {
+      this.products = data._embedded.products;
+      this.thePageNumber = data.page.number + 1;
+      this.thePageSize = data.page.size;
+      this.theTotalElements = data.page.totalElements;
+    };
   }
   
 }
