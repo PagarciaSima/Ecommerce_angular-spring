@@ -714,11 +714,6 @@ table.table.table-bordered th{
  * ----------------------------
  */
 
- .price{
-    margin:15px 0 0;
-    font-weight:800;
-    color:#0da8e4
-}
 
 .detail-section{
     margin-top:60px
@@ -727,6 +722,7 @@ table.table.table-bordered th{
 .detail-img{
     width: 30%;
 }
+
 /**/
 
 /* 
@@ -1039,4 +1035,9 @@ footer ul li{
         border:0;
         padding:8px 0
     }
+    :host ::ng-deep .pagination > li.page-item.active > a.page-link > span {
+        display: none;
+    }
+    
+    
 }
