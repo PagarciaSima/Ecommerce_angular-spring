@@ -17,7 +17,7 @@ export class CartService {
   addToCart(theCartItem: CartItem) {
     // check if we have the item in our cart already
     let alreadyExistingInCart: boolean = false;
-    let existingCartItem: CartItem = undefined;
+    let existingCartItem!: CartItem;
 
     if(this.cartItems.length > 0) {
       for (let tempCartItem of this.cartItems) {
@@ -40,7 +40,33 @@ export class CartService {
     // Compute cart total price and quantity
     this.computeCartTotals();
   }
+
   computeCartTotals() {
-    throw new Error('Method not implemented.');
+    let totalPriceValue: number = 0;
+    let totalQuantityValue:number = 0;
+
+    for (let currentCartItem of this.cartItems) {
+      totalPriceValue += currentCartItem.quantity! * currentCartItem.unitPrice!;
+      totalQuantityValue += currentCartItem.quantity!;
+    }
+
+    // Publish new values / all subscribers receive the new data with next
+    this.totalPrice.next(totalPriceValue);
+    this.totalQuantity.next(totalQuantityValue);
+
+    // log cart data for debugging purposes
+    this.logCartData(totalPriceValue, totalQuantityValue);
   }
+
+  logCartData(totalPriceValue: number, totalQuantityValue: number) {
+    console.log('Contents of the cart')
+    for(let tempCartItem of this.cartItems){
+      const subToTalPrice = tempCartItem.quantity! * tempCartItem.unitPrice!;
+      console.log(`name: ${tempCartItem.name}, quantity=${tempCartItem.quantity}, unitPrice=${tempCartItem.unitPrice}, subTotalPrice=${subToTalPrice}`);
+    }
+    console.log(`totalPrice: ${totalPriceValue.toFixed(2)}, totalQuantity: ${totalQuantityValue}`);
+    console.log('------');
+  }
+
+
 }
