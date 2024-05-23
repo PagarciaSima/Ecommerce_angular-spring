@@ -13,6 +13,7 @@ import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import com.ecommerce.angularspring.Springbootecommerce.entity.Country;
 import com.ecommerce.angularspring.Springbootecommerce.entity.Product;
 import com.ecommerce.angularspring.Springbootecommerce.entity.ProductCategory;
+import com.ecommerce.angularspring.Springbootecommerce.entity.State;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.metamodel.EntityType;
