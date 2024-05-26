@@ -7,6 +7,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
@@ -15,7 +17,7 @@ import lombok.Setter;
 @Table(name = "order_item")
 @Getter
 @Setter
-public class OderItem {
+public class OrderItem {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -33,4 +35,8 @@ public class OderItem {
 	
 	@Column(name = "product_id")
 	private Long productId;
+	
+	@ManyToOne
+	@JoinColumn(name = "order_id")
+	private Order order;
 }
