@@ -12,7 +12,20 @@ export class CartService {
   totalPrice: Subject<number> = new BehaviorSubject<number>(0);
   totalQuantity: Subject<number> = new BehaviorSubject<number>(0);
 
-  constructor() { }
+  storage: Storage = localStorage;
+
+  constructor() { 
+
+    // Read data from storage
+    let data: any = JSON.parse(this.storage.getItem('cartItems')!);
+
+    if( data != null){
+      this.cartItems = data;
+    }
+
+    // Compute totals based on the data that is read from storage
+    this.computeCartTotals();
+  }
 
   addToCart(theCartItem: CartItem) {
     // check if we have the item in our cart already
@@ -53,6 +66,13 @@ export class CartService {
 
     // log cart data for debugging purposes
     this.logCartData(totalPriceValue, totalQuantityValue);
+
+    //persist cart data
+    this.persistCartItems();
+  }
+
+  persistCartItems() {
+    this.storage.setItem('cartItems', JSON.stringify(this.cartItems))
   }
 
   logCartData(totalPriceValue: number, totalQuantityValue: number) {
