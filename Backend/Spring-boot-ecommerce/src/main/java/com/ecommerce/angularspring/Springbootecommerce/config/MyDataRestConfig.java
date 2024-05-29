@@ -12,6 +12,7 @@ import org.springframework.http.HttpMethod;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 
 import com.ecommerce.angularspring.Springbootecommerce.entity.Country;
+import com.ecommerce.angularspring.Springbootecommerce.entity.Order;
 import com.ecommerce.angularspring.Springbootecommerce.entity.Product;
 import com.ecommerce.angularspring.Springbootecommerce.entity.ProductCategory;
 import com.ecommerce.angularspring.Springbootecommerce.entity.State;
@@ -48,6 +49,9 @@ public class MyDataRestConfig implements RepositoryRestConfigurer{
 		
 		// Disable http methods for State PUT, POST AND DELETE.
 		disableHttpMethods(State.class, config, theUnsupportedActions);
+		
+		// Disable http methods for Order PUT, POST AND DELETE.
+		disableHttpMethods(Order.class, config, theUnsupportedActions);
 		
 		// Call internal helper method to expose ids
 		exposeIds(config);
