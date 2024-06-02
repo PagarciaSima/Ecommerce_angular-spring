@@ -20,30 +20,33 @@ export class CartDetailsComponent implements OnInit {
   }
 
   listCartDetails() {
+
     // get a handle to the cart items
     this.cartItems = this.cartService.cartItems;
-    // subscribe to cart total price
+
+    // subscribe to the cart totalPrice
     this.cartService.totalPrice.subscribe(
       data => this.totalPrice = data
     );
-    // subscribe to cart total quantity
-    this.cartService.totalQuantity.subscribe(
+
+    // subscribe to the cart totalQuantity
+    this.cartService.totalQuantity.subscribe( 
       data => this.totalQuantity = data
     );
-    // compute cart total price & cuantity
+
+    // compute cart total price and quantity
     this.cartService.computeCartTotals();
   }
 
-  incrementQuantity(theCartItem: CartItem){
+  incrementQuantity(theCartItem: CartItem) {
     this.cartService.addToCart(theCartItem);
   }
 
-  decrementQuantty(theCartItem: CartItem) {
+  decrementQuantity(theCartItem: CartItem) {
     this.cartService.decrementQuantity(theCartItem);
   }
 
   remove(theCartItem: CartItem) {
     this.cartService.remove(theCartItem);
   }
-
 }

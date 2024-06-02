@@ -14,11 +14,9 @@ export class ProductDetailsComponent implements OnInit {
 
   product: Product = new Product();
 
-  constructor(
-    private productService: ProductService,    
-    private cartService: CartService,         
-    private route: ActivatedRoute  
-  ) { }
+  constructor(private productService: ProductService,
+              private cartService: CartService,
+              private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(() => {
@@ -39,9 +37,12 @@ export class ProductDetailsComponent implements OnInit {
   }
 
   addToCart() {
+
     console.log(`Adding to cart: ${this.product.name}, ${this.product.unitPrice}`);
-    const theCartItem = new CartItem(this.product);
+    let theCartItem = new CartItem(this.product.id, this.product.name, this.product.imageUrl, this.product.unitPrice);
+    
     this.cartService.addToCart(theCartItem);
+    
   }
 
 }

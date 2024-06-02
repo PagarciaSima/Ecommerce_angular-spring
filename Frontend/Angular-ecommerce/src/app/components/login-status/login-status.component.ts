@@ -1,7 +1,6 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { OktaAuthStateService, OKTA_AUTH } from '@okta/okta-angular';
 import { OktaAuth } from '@okta/okta-auth-js';
-
 
 @Component({
   selector: 'app-login-status',
@@ -12,35 +11,37 @@ export class LoginStatusComponent implements OnInit {
 
   isAuthenticated: boolean = false;
   userFullName: string = '';
+
   storage: Storage = sessionStorage;
 
-  constructor(
-    private oktaAuthService: OktaAuthStateService,
-    @Inject(OKTA_AUTH) private oktaAuth: OktaAuth
-  ) { }
+  constructor(private oktaAuthService: OktaAuthStateService,
+    @Inject(OKTA_AUTH) private oktaAuth: OktaAuth) { }
 
   ngOnInit(): void {
 
-    // Subscribe to auth state changes
+    // Subscribe to authentication state changes
     this.oktaAuthService.authState$.subscribe(
-      (result: any) => {
-        this.isAuthenticated = result.isAuthenticated! 
+      (result) => {
+        this.isAuthenticated = result.isAuthenticated!;
         this.getUserDetails();
       }
     );
   }
+  
   getUserDetails() {
-    if(this.isAuthenticated) {
-      // Fetch the logged in user datails (user's claims)
+    if (this.isAuthenticated) {
 
-      // User full name is exposed as a property name
+      // Fetch the logged in user details (user's claims)
+      //
+      // user full name is exposed as a property name
       this.oktaAuth.getUser().then(
         (res) => {
           this.userFullName = res.name as string;
 
-          // Retrieve the user's email from authentication response
+          // retrieve the user's email from authentication response
           const theEmail = res.email;
-          // Store the email in browser
+
+          // now store the email in browser storage
           this.storage.setItem('userEmail', JSON.stringify(theEmail));
         }
       );
@@ -48,7 +49,7 @@ export class LoginStatusComponent implements OnInit {
   }
 
   logout() {
-    // Terminates the session with Okta and removes current tokens
+    // Terminates the session with Okta and removes current tokens.
     this.oktaAuth.signOut();
   }
 

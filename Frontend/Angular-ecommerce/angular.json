@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Angular-ecommerce": {
+    "angular-ecommerce": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -14,12 +14,13 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "allowedCommonJsDependencies": [
+              "lodash",
               "@babel/runtime-corejs3",
-              "cross-fetch",
-              "p-cancelable",
-              "tiny-emitter",
+              "@okta/okta-signin-widget",
               "detect-node",
-              "@okta/okta-signin-widget"
+              "tiny-emitter",
+              "p-cancelable",
+              "cross-fetch"
             ],
             "outputPath": "dist/angular-ecommerce",
             "index": "src/index.html",
@@ -60,6 +61,14 @@
               ],
               "outputHashing": "all"
             },
+            "qa": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.qa.ts"
+                }
+              ]
+            },
             "development": {
               "buildOptimizer": false,
               "optimization": false,
@@ -75,10 +84,13 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "Angular-ecommerce:build:production"
+              "browserTarget": "angular-ecommerce:build:production"
+            },
+            "qa": {
+              "browserTarget": "angular-ecommerce:build:qa"
             },
             "development": {
-              "browserTarget": "Angular-ecommerce:build:development"
+              "browserTarget": "angular-ecommerce:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -86,7 +98,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Angular-ecommerce:build"
+            "browserTarget": "angular-ecommerce:build"
           }
         },
         "test": {
@@ -105,8 +117,22 @@
             ],
             "scripts": []
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+          }
         }
       }
     }
+  },
+  "cli": {
+    "schematicCollections": [
+      "@angular-eslint/schematics"
+    ]
   }
 }
