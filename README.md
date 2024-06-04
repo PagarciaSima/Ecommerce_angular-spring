@@ -7,8 +7,8 @@ This Full stack project is based on Udemy course "Full Stack: Angular and Java S
 - **User Authentication**: Utilizes Okta and Spring Security for authentication and authorization.
 - **Product Catalog**: Product catalog includes pagination and search by product name.
 - **Shopping Cart**: Users can add products to the cart and checkout seamlessly.
-- **Docker**: Para la contenerización y distribución de la aplicación y servicios asociados.
-- **MySQL**: Base de datos relacional para almacenar y gestionar los datos.
+- **Payment Integration**: Utilizes stripe payment server.
+- **Responsive design**
 
 ## Technologies 
 
