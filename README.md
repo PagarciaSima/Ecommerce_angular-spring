@@ -30,3 +30,26 @@ This Full stack project is based on Udemy course "Full Stack: Angular and Java S
 
 ### Login
 ![login](img/login.png)
+
+### Successfull login
+![Successfull login](img/logged.png)
+
+### Product catalog
+![Product catalog](img/products.png)
+
+### Product detail
+![Product detail](img/product detail.png)
+
+### Orders history
+![Orders history](img/orders.png)
+
+### Cart
+![Cart](img/cart.png)
+
+### Checkout
+![Checkout](img/checkout1.png)
+
+### Checkout
+![Checkout](img/checkout2.png)
+
+## Demo
