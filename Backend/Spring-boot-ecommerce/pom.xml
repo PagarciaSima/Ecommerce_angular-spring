@@ -52,11 +52,14 @@
 		    <artifactId>okta-spring-boot-starter</artifactId>
 		    <version>3.0.2</version>
 		</dependency>
+<<<<<<< HEAD
 		<dependency>
 		    <groupId>com.stripe</groupId>
 		    <artifactId>stripe-java</artifactId>
 		    <version>20.80.0</version>
 		</dependency>
+=======
+>>>>>>> 8527b71b2643a69c60b8db4f2f2d6a156284a461
 	</dependencies>
 
 	<build>

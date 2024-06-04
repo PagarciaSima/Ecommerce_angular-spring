@@ -13,6 +13,7 @@ import { Purchase } from 'src/app/common/purchase';
 import { environment } from 'src/environments/environment';
 import { PaymentInfo } from 'src/app/common/payment-info';
 
+
 @Component({
   selector: 'app-checkout',
   templateUrl: './checkout.component.html',
@@ -43,6 +44,7 @@ export class CheckoutComponent implements OnInit {
 
   isDisabled: boolean = false;
 
+
   constructor(private formBuilder: FormBuilder,
               private luv2ShopFormService: Luv2ShopFormService,
               private cartService: CartService,
@@ -51,6 +53,7 @@ export class CheckoutComponent implements OnInit {
                }
 
   ngOnInit(): void {
+
 
     // Setup Stripe payment form
     this.setupStripePaymentForm();
@@ -142,6 +145,7 @@ export class CheckoutComponent implements OnInit {
     });
 
   }
+
 
   reviewCartDetails() {
 
@@ -312,6 +316,7 @@ export class CheckoutComponent implements OnInit {
       return;
     }
 
+
   }
 
   resetCart() {
@@ -320,7 +325,7 @@ export class CheckoutComponent implements OnInit {
     this.cartService.totalPrice.next(0);
     this.cartService.totalQuantity.next(0);
     this.cartService.persistCartItems();
-    
+
     // reset the form
     this.checkoutFormGroup.reset();
 
