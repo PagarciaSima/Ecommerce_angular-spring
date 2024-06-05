@@ -13,7 +13,6 @@ This Full stack project is based on Udemy course "Full Stack: Angular and Java S
 ## Technologies 
 
 - Angular: 14.1.1
-- Apache Mavem.
 - Apache Maven
 - Hibernate
 - Spring Boot 3.1.11
@@ -38,7 +37,7 @@ This Full stack project is based on Udemy course "Full Stack: Angular and Java S
 ![Product catalog](img/products.png)
 
 ### Product detail
-![Product detail](img/product detail.png)
+![Product detail](img/product_detail.png)
 
 ### Orders history
 ![Orders history](img/orders.png)
@@ -53,3 +52,4 @@ This Full stack project is based on Udemy course "Full Stack: Angular and Java S
 ![Checkout](img/checkout2.png)
 
 ## Demo
+[Link to video Demo](https://www.youtube.com/watch?v=WjJQ25zMDQE)
